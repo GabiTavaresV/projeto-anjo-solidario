@@ -6,8 +6,9 @@ export class MongoRepositoryItem implements IRepositoryItem {
   findOneAndRemove(): Promise<ICreateItem> {
     throw new Error("Method not implemented.");
   }
-  findOne(): Promise<ICreateItem> {
-    throw new Error("Method not implemented.");
+  async findOne(name: string): Promise<any> {
+    const listByName = await Item.findOne();
+    return listByName;
   }
   async findAll(): Promise<any> {
     const list = await Item.find();
