@@ -20,5 +20,6 @@ ongRouter.post("/", (req, res) => controllerOng.createOrg(req, res));
 ongRouter.get("/", (req, res) => controllerOng.listOngs(res));
 
 ongRouter.post("/item", (req, res) => controllerItem.createItem(req, res));
+ongRouter.get("/item", (req, res) => controllerItem.listItens(res));
 
 export default ongRouter;
