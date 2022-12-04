@@ -1,9 +1,8 @@
 import { ICreateOng } from "../interfaces/createOng";
-import { IRepository } from "../interfaces/repository";
+import { IRepositoryOng } from "../interfaces/repositoryOng";
 import Ong from "../database/OngSchema";
 
-export class MongoRepository implements IRepository {
-
+export class MongoRepository implements IRepositoryOng {
   findOne(): Promise<ICreateOng> {
     throw new Error("Method not implemented.");
   }
@@ -16,7 +15,7 @@ export class MongoRepository implements IRepository {
   }
   async save(ong: ICreateOng) {
     const result = await Ong.create(ong);
-    ong.nameOrg = result.nameOng
+    ong.nameOrg = result.nameOng;
     return ong;
   }
 }
