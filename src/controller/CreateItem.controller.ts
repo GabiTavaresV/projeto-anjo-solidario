@@ -16,4 +16,9 @@ export class CreateItemController {
     const resultListItens = await this.service.listItens();
     return res.json(resultListItens).status(200);
   }
+
+  async listItensByName(req: Request, res: Response): Promise<Response> {
+    const resultListItensByName = await this.service.listItensByName(req.body);
+    return res.json(resultListItensByName).status(200);
+  }
 }

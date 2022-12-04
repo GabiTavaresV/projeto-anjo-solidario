@@ -22,4 +22,9 @@ export class CreateItemService {
     const resultList = await this.repository.findAll();
     return resultList;
   }
+
+  async listItensByName(name: string){
+    const resultListByName = await this.repository.findOne(name);
+    return resultListByName
+  }
 }
