@@ -1,5 +1,5 @@
 import { ICreateOng } from "../interfaces/createOng";
-import { MongoRepository } from "../repository/repository";
+import { MongoRepository } from "../repository/repositoryOng";
 
 export class CreateOngService {
   repository: MongoRepository;
